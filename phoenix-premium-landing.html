@@ -1,0 +1,1952 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phoenix Gymnastics Academy | Olympic-Standard Training untuk Masa Depan Anak Anda</title>
+    <meta name="description" content="Premium gymnastics academy di Cinere dengan standar olimpiade. Bangun kepercayaan diri, disiplin, dan jiwa juara anak Anda. Trial class tersedia - tempat terbatas.">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: #ffffff;
+            overflow-x: hidden;
+        }
+        
+        /* Premium Color Palette */
+        :root {
+            --rose-50: #fff1f2;
+            --rose-100: #ffe4e6;
+            --rose-200: #fecdd3;
+            --rose-300: #fda4af;
+            --rose-400: #fb7185;
+            --rose-500: #f43f5e;
+            --rose-600: #e11d48;
+            --rose-700: #be123c;
+            --rose-800: #9f1239;
+            --champagne: #f8f4f0;
+            --gold: #d4af37;
+            --navy: #1e293b;
+        }
+        
+        .container {
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+        
+        /* Header - Premium & Sticky */
+        header {
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(20px);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 20px 0;
+            transition: all 0.3s ease;
+        }
+        
+        header.scrolled {
+            padding: 12px 0;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+        
+        .logo {
+            height: 56px;
+            transition: all 0.3s ease;
+        }
+        
+        header.scrolled .logo {
+            height: 44px;
+        }
+        
+        .brand-tag {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            color: var(--gold);
+            font-weight: 600;
+            border-left: 2px solid var(--rose-300);
+            padding-left: 12px;
+        }
+        
+        .cta-header {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 28px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            border: none;
+            font-size: 15px;
+            letter-spacing: 0.2px;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, var(--rose-500) 0%, var(--rose-600) 100%);
+            color: white;
+            box-shadow: 0 4px 20px rgba(244, 63, 94, 0.25);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 28px rgba(244, 63, 94, 0.35);
+        }
+        
+        .btn-secondary {
+            background: white;
+            color: var(--rose-600);
+            border: 2px solid var(--rose-200);
+        }
+        
+        .btn-secondary:hover {
+            background: var(--rose-50);
+            border-color: var(--rose-400);
+        }
+        
+        /* Hero Section - Cinematic & Emotional */
+        .hero {
+            position: relative;
+            padding: 100px 0 120px;
+            background: linear-gradient(165deg, #ffffff 0%, var(--rose-50) 40%, var(--champagne) 100%);
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            background: radial-gradient(circle at top right, rgba(244, 63, 94, 0.08) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 80px;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero-content {
+            animation: fadeInUp 1s ease-out;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: white;
+            padding: 10px 22px;
+            border-radius: 50px;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--rose-700);
+            box-shadow: 0 4px 16px rgba(244, 63, 94, 0.15);
+            margin-bottom: 28px;
+            border: 1px solid var(--rose-100);
+        }
+        
+        .hero-badge svg {
+            color: var(--gold);
+        }
+        
+        .hero-content h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 62px;
+            font-weight: 800;
+            line-height: 1.15;
+            margin-bottom: 28px;
+            color: var(--navy);
+            letter-spacing: -1px;
+        }
+        
+        .hero-content h1 .highlight {
+            background: linear-gradient(135deg, var(--rose-500) 0%, var(--rose-700) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: block;
+            margin-top: 8px;
+        }
+        
+        .hero-subtitle {
+            font-size: 21px;
+            color: #475569;
+            margin-bottom: 36px;
+            line-height: 1.7;
+            font-weight: 400;
+        }
+        
+        .hero-cta {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+        
+        .hero-cta .btn {
+            padding: 18px 36px;
+            font-size: 16px;
+        }
+        
+        .trust-stats {
+            display: flex;
+            gap: 48px;
+            padding-top: 32px;
+            border-top: 1px solid var(--rose-200);
+            flex-wrap: wrap;
+        }
+        
+        .stat-item {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .stat-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 42px;
+            font-weight: 700;
+            color: var(--rose-600);
+            line-height: 1;
+            margin-bottom: 6px;
+        }
+        
+        .stat-label {
+            font-size: 14px;
+            color: #64748b;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .hero-image-wrapper {
+            position: relative;
+            animation: fadeInRight 1s ease-out 0.3s both;
+        }
+        
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        .hero-image {
+            width: 100%;
+            border-radius: 24px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero-video-note {
+            margin-top: 24px;
+            padding: 20px;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+        
+        .video-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, var(--rose-500), var(--rose-600));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            flex-shrink: 0;
+        }
+        
+        .video-note-text {
+            font-size: 14px;
+            color: #64748b;
+            line-height: 1.5;
+        }
+        
+        /* Value Proposition Section */
+        .value-props {
+            padding: 100px 0;
+            background: white;
+        }
+        
+        .section-header {
+            text-align: center;
+            max-width: 760px;
+            margin: 0 auto 70px;
+        }
+        
+        .section-label {
+            display: inline-block;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--rose-600);
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+        
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            font-weight: 700;
+            color: var(--navy);
+            line-height: 1.25;
+            margin-bottom: 20px;
+            letter-spacing: -0.5px;
+        }
+        
+        .section-subtitle {
+            font-size: 19px;
+            color: #64748b;
+            line-height: 1.7;
+        }
+        
+        .value-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+        
+        .value-card {
+            padding: 40px 32px;
+            background: linear-gradient(145deg, #ffffff 0%, var(--rose-50) 100%);
+            border-radius: 20px;
+            border: 1px solid var(--rose-100);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .value-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--rose-500), var(--rose-600));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+        
+        .value-card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .value-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(244, 63, 94, 0.15);
+            border-color: var(--rose-300);
+        }
+        
+        .value-icon {
+            width: 64px;
+            height: 64px;
+            background: linear-gradient(135deg, var(--rose-500), var(--rose-600));
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 24px;
+            box-shadow: 0 8px 20px rgba(244, 63, 94, 0.25);
+        }
+        
+        .value-icon svg {
+            width: 32px;
+            height: 32px;
+            color: white;
+        }
+        
+        .value-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--navy);
+            margin-bottom: 14px;
+        }
+        
+        .value-card p {
+            font-size: 16px;
+            color: #64748b;
+            line-height: 1.7;
+        }
+        
+        /* Benefits Section - Emotional */
+        .benefits {
+            padding: 100px 0;
+            background: linear-gradient(180deg, white 0%, var(--champagne) 100%);
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+        
+        .benefits-image {
+            position: relative;
+        }
+        
+        .benefits-image img {
+            width: 100%;
+            border-radius: 24px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+        }
+        
+        .benefits-badge {
+            position: absolute;
+            bottom: 24px;
+            left: 24px;
+            background: white;
+            padding: 16px 24px;
+            border-radius: 16px;
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .benefits-badge-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--rose-500), var(--rose-600));
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+        
+        .benefits-badge-text {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--navy);
+        }
+        
+        .benefits-content h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 44px;
+            font-weight: 700;
+            color: var(--navy);
+            line-height: 1.3;
+            margin-bottom: 24px;
+        }
+        
+        .benefits-intro {
+            font-size: 18px;
+            color: #64748b;
+            line-height: 1.7;
+            margin-bottom: 36px;
+        }
+        
+        .benefits-list {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .benefit-item {
+            display: flex;
+            gap: 16px;
+            padding: 20px;
+            background: white;
+            border-radius: 16px;
+            border: 1px solid var(--rose-100);
+            transition: all 0.3s ease;
+        }
+        
+        .benefit-item:hover {
+            transform: translateX(8px);
+            box-shadow: 0 8px 24px rgba(244, 63, 94, 0.1);
+        }
+        
+        .benefit-icon-wrapper {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, var(--rose-100), var(--rose-200));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        
+        .benefit-icon-wrapper svg {
+            width: 24px;
+            height: 24px;
+            color: var(--rose-600);
+        }
+        
+        .benefit-text h4 {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--navy);
+            margin-bottom: 6px;
+        }
+        
+        .benefit-text p {
+            font-size: 15px;
+            color: #64748b;
+            line-height: 1.6;
+        }
+        
+        /* Olympic Standard Section */
+        .olympic-standard {
+            padding: 100px 0;
+            background: var(--navy);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .olympic-standard::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 20% 50%, rgba(244, 63, 94, 0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 50%, rgba(212, 175, 55, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+        
+        .olympic-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .olympic-header {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 80px;
+        }
+        
+        .olympic-header .section-label {
+            color: var(--gold);
+        }
+        
+        .olympic-header h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 52px;
+            font-weight: 700;
+            line-height: 1.25;
+            margin-bottom: 24px;
+            color: white;
+        }
+        
+        .olympic-header p {
+            font-size: 20px;
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.7;
+        }
+        
+        .olympic-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+        }
+        
+        .olympic-card {
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.4s ease;
+        }
+        
+        .olympic-card:hover {
+            background: rgba(255, 255, 255, 0.08);
+            transform: translateY(-4px);
+            border-color: rgba(244, 63, 94, 0.3);
+        }
+        
+        .olympic-card-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+        
+        .olympic-card-icon {
+            width: 56px;
+            height: 56px;
+            background: linear-gradient(135deg, var(--rose-500), var(--rose-600));
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        
+        .olympic-card-icon svg {
+            width: 28px;
+            height: 28px;
+            color: white;
+        }
+        
+        .olympic-card h3 {
+            font-size: 22px;
+            font-weight: 700;
+            color: white;
+        }
+        
+        .olympic-card p {
+            font-size: 16px;
+            color: rgba(255, 255, 255, 0.75);
+            line-height: 1.7;
+        }
+        
+        .olympic-footer {
+            margin-top: 60px;
+            padding: 40px;
+            background: rgba(212, 175, 55, 0.1);
+            border-radius: 20px;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            text-align: center;
+        }
+        
+        .coach-intro {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 24px;
+            margin-bottom: 20px;
+        }
+        
+        .coach-photo {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 3px solid var(--gold);
+        }
+        
+        .coach-info h4 {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--gold);
+            margin-bottom: 4px;
+        }
+        
+        .coach-info p {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        .olympic-footer-text {
+            font-size: 17px;
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.7;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* Premium Environment Section */
+        .premium-environment {
+            padding: 100px 0;
+            background: white;
+        }
+        
+        .environment-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 32px;
+            margin-top: 60px;
+        }
+        
+        .environment-card {
+            position: relative;
+            border-radius: 24px;
+            overflow: hidden;
+            height: 400px;
+            cursor: pointer;
+            transition: transform 0.4s ease;
+        }
+        
+        .environment-card:hover {
+            transform: scale(1.02);
+        }
+        
+        .environment-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .environment-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 32px;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 100%);
+        }
+        
+        .environment-overlay h3 {
+            font-size: 24px;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 8px;
+        }
+        
+        .environment-overlay p {
+            font-size: 15px;
+            color: rgba(255, 255, 255, 0.9);
+        }
+        
+        /* Testimonials - Enhanced */
+        .testimonials {
+            padding: 100px 0;
+            background: linear-gradient(180deg, white 0%, var(--rose-50) 100%);
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+            margin-top: 60px;
+        }
+        
+        .testimonial-card {
+            padding: 36px;
+            background: white;
+            border-radius: 20px;
+            border: 1px solid var(--rose-100);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            transition: all 0.4s ease;
+            position: relative;
+        }
+        
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: 24px;
+            left: 24px;
+            font-size: 80px;
+            font-family: 'Playfair Display', serif;
+            color: var(--rose-200);
+            line-height: 1;
+            opacity: 0.5;
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 40px rgba(244, 63, 94, 0.15);
+            border-color: var(--rose-300);
+        }
+        
+        .testimonial-rating {
+            font-size: 20px;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .testimonial-text {
+            font-size: 16px;
+            line-height: 1.7;
+            color: #475569;
+            margin-bottom: 24px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .testimonial-author {
+            font-weight: 700;
+            color: var(--navy);
+            font-size: 16px;
+            margin-bottom: 4px;
+        }
+        
+        .testimonial-role {
+            font-size: 14px;
+            color: #64748b;
+        }
+        
+        /* FAQ Section */
+        .faq {
+            padding: 100px 0;
+            background: white;
+        }
+        
+        .faq-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            margin-bottom: 20px;
+            border: 1px solid var(--rose-100);
+            border-radius: 16px;
+            overflow: hidden;
+            background: white;
+            transition: all 0.3s ease;
+        }
+        
+        .faq-item:hover {
+            box-shadow: 0 4px 20px rgba(244, 63, 94, 0.1);
+        }
+        
+        .faq-question {
+            padding: 28px 32px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            font-size: 18px;
+            color: var(--navy);
+            background: white;
+            transition: background 0.3s ease;
+        }
+        
+        .faq-question:hover {
+            background: var(--rose-50);
+        }
+        
+        .faq-question.active {
+            background: var(--rose-50);
+            color: var(--rose-700);
+        }
+        
+        .faq-icon {
+            width: 24px;
+            height: 24px;
+            color: var(--rose-500);
+            transition: transform 0.3s ease;
+            flex-shrink: 0;
+        }
+        
+        .faq-question.active .faq-icon {
+            transform: rotate(180deg);
+        }
+        
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.4s ease;
+            padding: 0 32px;
+        }
+        
+        .faq-answer.active {
+            max-height: 500px;
+            padding: 0 32px 28px;
+        }
+        
+        .faq-answer p {
+            font-size: 16px;
+            line-height: 1.7;
+            color: #64748b;
+        }
+        
+        .faq-highlight {
+            background: var(--rose-50);
+            padding: 20px;
+            border-radius: 12px;
+            border-left: 4px solid var(--rose-500);
+            margin-top: 16px;
+        }
+        
+        .faq-highlight p {
+            color: var(--navy);
+            font-weight: 500;
+        }
+        
+        /* CTA Section - Urgent */
+        .cta-section {
+            padding: 100px 0;
+            background: linear-gradient(135deg, var(--rose-600) 0%, var(--rose-700) 100%);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+        
+        .cta-content {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .cta-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 10px 24px;
+            border-radius: 50px;
+            font-size: 13px;
+            font-weight: 600;
+            color: white;
+            margin-bottom: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .cta-content h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 52px;
+            font-weight: 700;
+            line-height: 1.25;
+            margin-bottom: 24px;
+        }
+        
+        .cta-content p {
+            font-size: 20px;
+            line-height: 1.7;
+            margin-bottom: 40px;
+            opacity: 0.95;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .btn-white {
+            background: white;
+            color: var(--rose-600);
+            font-size: 18px;
+            padding: 20px 40px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+        }
+        
+        .btn-white:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            font-size: 18px;
+            padding: 20px 40px;
+        }
+        
+        .btn-outline:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: white;
+        }
+        
+        .urgency-text {
+            margin-top: 32px;
+            font-size: 15px;
+            opacity: 0.9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        
+        /* Booking Form */
+        .booking-section {
+            padding: 100px 0;
+            background: var(--champagne);
+        }
+        
+        .booking-container {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .booking-card {
+            background: white;
+            padding: 50px;
+            border-radius: 24px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+        }
+        
+        .booking-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .booking-header h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 38px;
+            font-weight: 700;
+            color: var(--navy);
+            margin-bottom: 16px;
+        }
+        
+        .booking-header p {
+            font-size: 17px;
+            color: #64748b;
+        }
+        
+        .price-highlight {
+            background: linear-gradient(135deg, var(--rose-50) 0%, var(--rose-100) 100%);
+            padding: 24px;
+            border-radius: 16px;
+            text-align: center;
+            margin-bottom: 32px;
+            border: 2px solid var(--rose-200);
+        }
+        
+        .price-label {
+            font-size: 14px;
+            color: #64748b;
+            margin-bottom: 8px;
+        }
+        
+        .price-amount {
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            font-weight: 700;
+            color: var(--rose-600);
+            line-height: 1;
+        }
+        
+        .price-note {
+            font-size: 14px;
+            color: #64748b;
+            margin-top: 8px;
+        }
+        
+        .form-group {
+            margin-bottom: 24px;
+        }
+        
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            color: var(--navy);
+            margin-bottom: 10px;
+            font-size: 15px;
+        }
+        
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 16px 20px;
+            border: 2px solid var(--rose-100);
+            border-radius: 12px;
+            font-size: 16px;
+            font-family: 'Inter', sans-serif;
+            transition: all 0.3s ease;
+            background: white;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--rose-400);
+            box-shadow: 0 0 0 4px rgba(244, 63, 94, 0.1);
+        }
+        
+        .submit-btn {
+            width: 100%;
+            padding: 20px;
+            background: linear-gradient(135deg, var(--rose-500) 0%, var(--rose-600) 100%);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 18px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 32px;
+            box-shadow: 0 8px 24px rgba(244, 63, 94, 0.3);
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 32px rgba(244, 63, 94, 0.4);
+        }
+        
+        .submit-btn svg {
+            width: 24px;
+            height: 24px;
+        }
+        
+        .form-note {
+            text-align: center;
+            font-size: 14px;
+            color: #64748b;
+            margin-top: 20px;
+            line-height: 1.6;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--navy);
+            color: white;
+            padding: 80px 0 40px;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 60px;
+            margin-bottom: 60px;
+        }
+        
+        .footer-section h4 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--gold);
+        }
+        
+        .footer-section p {
+            font-size: 15px;
+            line-height: 1.7;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 16px;
+        }
+        
+        .footer-logo {
+            height: 60px;
+            margin-bottom: 24px;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 16px;
+            margin-top: 24px;
+        }
+        
+        .social-links a {
+            width: 44px;
+            height: 44px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            background: var(--rose-600);
+            transform: translateY(-3px);
+        }
+        
+        .social-links svg {
+            width: 20px;
+            height: 20px;
+            color: white;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 14px;
+        }
+        
+        /* Success Message */
+        .success-message {
+            text-align: center;
+            padding: 60px 40px;
+        }
+        
+        .success-message h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            color: var(--rose-600);
+            margin-bottom: 16px;
+        }
+        
+        .success-message p {
+            font-size: 17px;
+            color: #64748b;
+            line-height: 1.7;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 968px) {
+            .container {
+                padding: 0 24px;
+            }
+            
+            .hero-grid,
+            .benefits-grid,
+            .olympic-grid,
+            .environment-grid {
+                grid-template-columns: 1fr;
+                gap: 50px;
+            }
+            
+            .value-grid,
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero-content h1 {
+                font-size: 42px;
+            }
+            
+            .section-title {
+                font-size: 36px;
+            }
+            
+            .cta-header {
+                flex-direction: column;
+                gap: 12px;
+            }
+            
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+            
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .booking-card {
+                padding: 32px 24px;
+            }
+        }
+        
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-area">
+                    <img src="logo.png" alt="Phoenix Gymnastics Academy" class="logo">
+                    <span class="brand-tag">Olympic Standard</span>
+                </div>
+                <div class="cta-header">
+                    <a href="tel:+6285711194565" class="btn btn-secondary">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                        Hubungi Kami
+                    </a>
+                    <a href="#booking" class="btn btn-primary">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/></svg>
+                        Book Trial Rp 200rb
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+                        Founded by Olympian Rifda Irfanaluthfi
+                    </div>
+                    
+                    <h1>
+                        Bangun Anak yang Percaya Diri, Aktif & 
+                        <span class="highlight">Disiplin</span>
+                    </h1>
+                    
+                    <p class="hero-subtitle">
+                        Premium gymnastics academy dengan standar olimpiade. Bukan sekadar olahraga — ini tempat anak Anda bertumbuh menjadi pribadi yang kuat, berani, dan penuh karakter.
+                    </p>
+                    
+                    <div class="hero-cta">
+                        <a href="#booking" class="btn btn-primary">
+                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/></svg>
+                            Book Trial Class
+                        </a>
+                        <a href="https://wa.me/6285711194565" target="_blank" class="btn btn-secondary">
+                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                            Chat WhatsApp
+                        </a>
+                    </div>
+                    
+                    <div class="trust-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">200+</div>
+                            <div class="stat-label">Active Students</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">98%</div>
+                            <div class="stat-label">Parent Satisfaction</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">4.9★</div>
+                            <div class="stat-label">Google Rating</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hero-image-wrapper">
+                    <img src="hero-image.jpg" alt="Phoenix Gymnastics Training" class="hero-image">
+                    <div class="hero-video-note">
+                        <div class="video-icon">
+                            <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                        </div>
+                        <div class="video-note-text">
+                            <strong>Lihat suasana kelas kami</strong> di Instagram @phoenixgymacademy
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Value Propositions -->
+    <section class="value-props">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Kenapa Parents Memilih Phoenix</span>
+                <h2 class="section-title">Bukan Sekadar Gymnastics Class</h2>
+                <p class="section-subtitle">Phoenix adalah tempat di mana anak Anda tidak hanya belajar bergerak, tetapi bertumbuh menjadi pribadi yang lebih kuat, percaya diri, dan disiplin.</p>
+            </div>
+            
+            <div class="value-grid">
+                <div class="value-card">
+                    <div class="value-icon">
+                        <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+                    </div>
+                    <h3>Olympic Standard</h3>
+                    <p>Program dikembangkan langsung oleh Rifda Irfanaluthfi, satu-satunya pesenam Indonesia di Olimpiade Paris 2024. Standar latihan setara atlet profesional.</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">
+                        <svg fill="currentColor" viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+                    </div>
+                    <h3>Perhatian Personal</h3>
+                    <p>Kelas kecil maksimal 8 anak per coach. Setiap anak mendapat perhatian penuh untuk perkembangan optimal dan aman.</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">
+                        <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                    </div>
+                    <h3>Lingkungan Premium</h3>
+                    <p>Fasilitas lengkap dan aman di Cinere Bellevue Mall. Lokasi strategis, parkir luas, mudah dijangkau dari Pondok Indah, Lebak Bulus, dan Depok.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits for Child Development -->
+    <section class="benefits">
+        <div class="container">
+            <div class="benefits-grid">
+                <div class="benefits-image">
+                    <img src="training-session.jpg" alt="Phoenix Training Session">
+                    <div class="benefits-badge">
+                        <div class="benefits-badge-icon">
+                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M9 11.75c-.69 0-1.25.56-1.25 1.25s.56 1.25 1.25 1.25 1.25-.56 1.25-1.25-.56-1.25-1.25-1.25zm6 0c-.69 0-1.25.56-1.25 1.25s.56 1.25 1.25 1.25 1.25-.56 1.25-1.25-.56-1.25-1.25-1.25zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8 0-.29.02-.58.05-.86 2.36-1.05 4.23-2.98 5.21-5.37C11.07 8.33 14.05 10 17.42 10c.78 0 1.53-.09 2.25-.26.21.71.33 1.47.33 2.26 0 4.41-3.59 8-8 8z"/></svg>
+                        </div>
+                        <div class="benefits-badge-text">
+                            Ages 2-15 years
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="benefits-content">
+                    <span class="section-label">Manfaat Holistik</span>
+                    <h2>Lebih dari Fisik: Membangun Karakter untuk Kehidupan</h2>
+                    <p class="benefits-intro">
+                        Gymnastics bukan hanya soal gerakan dan kekuatan. Ini adalah investasi dalam perkembangan mental, emosional, dan sosial anak Anda.
+                    </p>
+                    
+                    <div class="benefits-list">
+                        <div class="benefit-item">
+                            <div class="benefit-icon-wrapper">
+                                <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+                            </div>
+                            <div class="benefit-text">
+                                <h4>Confidence & Self-Esteem</h4>
+                                <p>Setiap skill yang dikuasai membangun rasa percaya diri. Anak belajar bahwa usaha keras menghasilkan pencapaian nyata.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="benefit-item">
+                            <div class="benefit-icon-wrapper">
+                                <svg fill="currentColor" viewBox="0 0 24 24"><path d="M9 11H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2zm2-7h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z"/></svg>
+                            </div>
+                            <div class="benefit-text">
+                                <h4>Disiplin & Fokus</h4>
+                                <p>Latihan terstruktur mengajarkan rutinitas, komitmen, dan pentingnya konsistensi — nilai yang terbawa hingga dewasa.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="benefit-item">
+                            <div class="benefit-icon-wrapper">
+                                <svg fill="currentColor" viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+                            </div>
+                            <div class="benefit-text">
+                                <h4>Social Skills & Teamwork</h4>
+                                <p>Latihan dalam kelompok kecil mengajarkan kerja sama, menghargai teman, dan membangun persahabatan sehat.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="benefit-item">
+                            <div class="benefit-icon-wrapper">
+                                <svg fill="currentColor" viewBox="0 0 24 24"><path d="M20.57 14.86L22 13.43 20.57 12 17 15.57 8.43 7 12 3.43 10.57 2 9.14 3.43 7.71 2 5.57 4.14 4.14 2.71 2.71 4.14l1.43 1.43L2 7.71l1.43 1.43L2 10.57 3.43 12 7 8.43 15.57 17 12 20.57 13.43 22l1.43-1.43L16.29 22l2.14-2.14 1.43 1.43 1.43-1.43-1.43-1.43L22 16.29z"/></svg>
+                            </div>
+                            <div class="benefit-text">
+                                <h4>Active Lifestyle Sejak Dini</h4>
+                                <p>Anak aktif adalah anak sehat. Gymnastics membangun fondasi gaya hidup aktif yang bertahan seumur hidup.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="benefit-item">
+                            <div class="benefit-icon-wrapper">
+                                <svg fill="currentColor" viewBox="0 0 24 24"><path d="M13 7h-2v4H7v2h4v4h2v-4h4v-2h-4V7zm-1-5C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>
+                            </div>
+                            <div class="benefit-text">
+                                <h4>Postur & Koordinasi Motorik</h4>
+                                <p>Gerakan gymnastics memperbaiki postur tubuh, koordinasi, keseimbangan, dan kesadaran spasial anak.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Olympic Standard Section -->
+    <section class="olympic-standard">
+        <div class="container">
+            <div class="olympic-content">
+                <div class="olympic-header">
+                    <span class="section-label">Program & Standar</span>
+                    <h2>Dilatih dengan Standar Olimpiade</h2>
+                    <p>Phoenix bukan tempat kursus biasa. Kami membangun program dengan filosofi dan metode pelatihan atlet profesional — disesuaikan untuk perkembangan anak.</p>
+                </div>
+                
+                <div class="olympic-grid">
+                    <div class="olympic-card">
+                        <div class="olympic-card-header">
+                            <div class="olympic-card-icon">
+                                <svg fill="currentColor" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/></svg>
+                            </div>
+                            <h3>Structured Progression</h3>
+                        </div>
+                        <p>Setiap level memiliki milestone jelas. Dari Toddler hingga Competitive, anak berkembang bertahap sesuai usia dan kemampuan.</p>
+                    </div>
+                    
+                    <div class="olympic-card">
+                        <div class="olympic-card-header">
+                            <div class="olympic-card-icon">
+                                <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                            </div>
+                            <h3>Safety-First Approach</h3>
+                        </div>
+                        <p>Protokol keamanan ketat. Matras berkualitas internasional, coach terlatih safety & spotting, dan ratio coach-student terjaga.</p>
+                    </div>
+                    
+                    <div class="olympic-card">
+                        <div class="olympic-card-header">
+                            <div class="olympic-card-icon">
+                                <svg fill="currentColor" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+                            </div>
+                            <h3>Individual Assessment</h3>
+                        </div>
+                        <p>Setiap anak berbeda. Kami melakukan evaluasi berkala dan memberikan feedback personal untuk progress maksimal.</p>
+                    </div>
+                    
+                    <div class="olympic-card">
+                        <div class="olympic-card-header">
+                            <div class="olympic-card-icon">
+                                <svg fill="currentColor" viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+                            </div>
+                            <h3>Tim Coach Profesional</h3>
+                        </div>
+                        <p>Coach kami dilatih langsung oleh Rifda dengan standar coaching internasional. Passionate, sabar, dan expert dalam child development.</p>
+                    </div>
+                </div>
+                
+                <div class="olympic-footer">
+                    <div class="coach-intro">
+                        <img src="rifda-profile.jpg" alt="Rifda Irfanaluthfi" class="coach-photo">
+                        <div class="coach-info">
+                            <h4>Rifda Irfanaluthfi</h4>
+                            <p>Olympian Founder & Head Coach</p>
+                        </div>
+                    </div>
+                    <p class="olympic-footer-text">
+                        "Di Phoenix, saya ingin setiap anak merasakan apa yang saya rasakan — journey dari ragu menjadi percaya diri, dari takut menjadi berani. Program kami dirancang bersama tim coach Phoenix untuk memberikan pengalaman latihan terbaik, dengan standar yang sama seperti yang membangun saya menjadi atlet olimpiade."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Premium Environment -->
+    <section class="premium-environment">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Fasilitas & Lokasi</span>
+                <h2 class="section-title">Lingkungan Premium untuk Perkembangan Optimal</h2>
+                <p class="section-subtitle">Lokasi strategis di Cinere Bellevue Mall dengan fasilitas lengkap dan aman. Mudah dijangkau, parkir luas, dan suasana nyaman untuk parents menunggu.</p>
+            </div>
+            
+            <div class="environment-grid">
+                <div class="environment-card">
+                    <img src="facility-equipment.jpg" alt="Premium Equipment">
+                    <div class="environment-overlay">
+                        <h3>Equipment Berkualitas Internasional</h3>
+                        <p>Matras, beam, bars, dan vault standar kompetisi</p>
+                    </div>
+                </div>
+                
+                <div class="environment-card">
+                    <img src="facility-space.jpg" alt="Spacious Training Area">
+                    <div class="environment-overlay">
+                        <h3>Ruang Latihan Luas & AC</h3>
+                        <p>Area latihan nyaman dengan ventilasi optimal</p>
+                    </div>
+                </div>
+                
+                <div class="environment-card">
+                    <img src="facility-waiting.jpg" alt="Parent Waiting Area">
+                    <div class="environment-overlay">
+                        <h3>Waiting Area untuk Parents</h3>
+                        <p>Pantau perkembangan anak dengan nyaman</p>
+                    </div>
+                </div>
+                
+                <div class="environment-card">
+                    <img src="facility-location.jpg" alt="Strategic Location">
+                    <div class="environment-overlay">
+                        <h3>Lokasi Strategis di Mall</h3>
+                        <p>Akses mudah, parkir luas, banyak pilihan F&B</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Trust dari Parents</span>
+                <h2 class="section-title">Apa Kata Parents yang Sudah Bergabung?</h2>
+                <p class="section-subtitle">Lebih dari 200 keluarga mempercayakan perkembangan anak mereka pada Phoenix.</p>
+            </div>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"Anakku yang tadinya pemalu sekarang jadi lebih berani dan confident. Coach-coachnya sangat sabar dan perhatian. Fasilitasnya juga top! Worth every penny."</p>
+                    <div class="testimonial-author">Ibu Sarah</div>
+                    <div class="testimonial-role">Parent — Pondok Indah</div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"Phoenix is more than just a gymnastics class. My son learned discipline, teamwork, and resilience. The coaching team truly cares about each child's development."</p>
+                    <div class="testimonial-author">Mr. Ahmad</div>
+                    <div class="testimonial-role">Parent — Cinere</div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"Lokasi strategis, coach profesional, progress anakku kelihatan banget. Dari takut jadi berani. Dari malas gerak jadi aktif. Thank you Phoenix!"</p>
+                    <div class="testimonial-author">Ibu Dina</div>
+                    <div class="testimonial-role">Parent — Lebak Bulus</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Pertanyaan Umum</span>
+                <h2 class="section-title">Yang Sering Ditanyakan Parents</h2>
+            </div>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Apakah setiap class diajar langsung oleh Coach Rifda?
+                        <svg class="faq-icon" fill="currentColor" viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Coach Rifda adalah Olympian Founder dan Head Coach Phoenix. Beliau memimpin pengembangan seluruh program, menetapkan standar pelatihan, dan hadir dalam selected sessions bersama tim coach Phoenix.</p>
+                        <div class="faq-highlight">
+                            <p><strong>Semua coach di Phoenix dilatih langsung oleh Rifda</strong> dengan standar coaching internasional, sehingga setiap anak mendapat kualitas pelatihan olimpiade yang sama — tidak peduli di class mana pun mereka berada.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Berapa usia minimal untuk join?
+                        <svg class="faq-icon" fill="currentColor" viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Kami menerima anak mulai dari usia 2 tahun (Toddler Program) hingga 15 tahun. Setiap age group memiliki program yang disesuaikan dengan perkembangan motorik dan kognitif mereka.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Berapa maksimal anak dalam satu class?
+                        <svg class="faq-icon" fill="currentColor" viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Maksimal 8 anak per coach untuk memastikan setiap anak mendapat perhatian personal dan pelatihan yang aman. Untuk toddler, ratio lebih kecil (5-6 anak per coach).</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Apakah aman untuk anak yang baru pertama kali gymnastics?
+                        <svg class="faq-icon" fill="currentColor" viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sangat aman! Kami memiliki protokol safety ketat, equipment berkualitas internasional, coach terlatih spotting technique, dan progression bertahap. Setiap anak akan dimulai dari fundamental basics sebelum naik ke skill yang lebih advanced.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Bagaimana sistem pembayaran dan jadwal?
+                        <svg class="faq-icon" fill="currentColor" viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Trial class Rp 200.000 (sekali bayar). Setelah trial, Anda bisa pilih paket monthly atau 3-monthly. Jadwal flexible — weekday maupun weekend tersedia. Tim kami akan bantu carikan slot yang sesuai.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Apakah parents bisa menunggu dan melihat class?
+                        <svg class="faq-icon" fill="currentColor" viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Tentu! Kami menyediakan waiting area yang nyaman di mana parents bisa melihat langsung perkembangan anak selama latihan. Kami juga rutin memberikan feedback dan progress report.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <div class="cta-badge">
+                    <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+                    Slot Terbatas — Book Sekarang
+                </div>
+                <h2>Waktunya Investasi pada Masa Depan Anak</h2>
+                <p>Tempat terbatas untuk menjaga kualitas coaching. Jangan sampai kehabisan slot — trial class hanya Rp 200.000.</p>
+                <div class="cta-buttons">
+                    <a href="#booking" class="btn btn-white">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/></svg>
+                        Book Trial Class Sekarang
+                    </a>
+                    <a href="https://wa.me/6285711194565" target="_blank" class="btn btn-outline">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                        Tanya-Tanya via WhatsApp
+                    </a>
+                </div>
+                <p class="urgency-text">
+                    <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
+                    15 parents booking minggu ini — jangan sampai kehabisan slot!
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Form -->
+    <section class="booking-section" id="booking">
+        <div class="container">
+            <div class="booking-container">
+                <div class="booking-card">
+                    <div class="booking-header">
+                        <h2>Book Trial Class</h2>
+                        <p>Mulai journey perkembangan anak Anda bersama Phoenix</p>
+                    </div>
+                    
+                    <div class="price-highlight">
+                        <p class="price-label">Trial Class (60 menit)</p>
+                        <div class="price-amount">Rp 200.000</div>
+                        <p class="price-note">Termasuk: assessment, coach guidance, dan progress report</p>
+                    </div>
+                    
+                    <form id="bookingForm" onsubmit="handleSubmit(event)">
+                        <div class="form-group">
+                            <label for="parentName">Nama Orang Tua *</label>
+                            <input type="text" id="parentName" name="parentName" required placeholder="Masukkan nama Anda">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Nomor WhatsApp *</label>
+                            <input type="tel" id="phone" name="phone" required placeholder="08xxxxxxxxxx">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="childName">Nama Anak *</label>
+                            <input type="text" id="childName" name="childName" required placeholder="Masukkan nama anak">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="childAge">Usia Anak *</label>
+                            <select id="childAge" name="childAge" required>
+                                <option value="">Pilih usia</option>
+                                <option value="2-3 tahun">2-3 tahun (Toddler)</option>
+                                <option value="4-5 tahun">4-5 tahun (Toddler)</option>
+                                <option value="6-8 tahun">6-8 tahun (Artistic)</option>
+                                <option value="9-12 tahun">9-12 tahun (Artistic)</option>
+                                <option value="13+ tahun">13+ tahun (Artistic)</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="preferredDay">Hari Preferred *</label>
+                            <select id="preferredDay" name="preferredDay" required>
+                                <option value="">Pilih hari</option>
+                                <option value="Weekday (Senin-Jumat)">Weekday (Senin-Jumat)</option>
+                                <option value="Weekend (Sabtu-Minggu)">Weekend (Sabtu-Minggu)</option>
+                                <option value="Flexible">Flexible</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="source">Dari mana Anda tahu Phoenix?</label>
+                            <select id="source" name="source">
+                                <option value="">Pilih sumber</option>
+                                <option value="Instagram Ads">Instagram Ads</option>
+                                <option value="Facebook Ads">Facebook Ads</option>
+                                <option value="TikTok">TikTok</option>
+                                <option value="Google">Google</option>
+                                <option value="Referral">Referral (Teman/Keluarga)</option>
+                                <option value="Lewat di Mall">Lewat di Mall</option>
+                                <option value="Lainnya">Lainnya</option>
+                            </select>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">
+                            <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                            Kirim via WhatsApp & Book Trial
+                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+                        </button>
+                        
+                        <p class="form-note">
+                            * Dengan mengirim form, Anda akan dihubungkan ke WhatsApp kami untuk konfirmasi jadwal trial
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <img src="logo.png" alt="Phoenix Logo" class="footer-logo" style="filter: brightness(0) invert(1);">
+                    <p>Olympic-standard gymnastics academy di Jakarta. Membangun kepercayaan diri, disiplin, dan karakter juara dalam setiap anak.</p>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/phoenixgymacademy" target="_blank" title="Instagram">
+                            <svg fill="currentColor" viewBox="0 0 24 24"><path d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z"/></svg>
+                        </a>
+                        <a href="https://www.tiktok.com/@phoenixgymacademy" target="_blank" title="TikTok">
+                            <svg fill="currentColor" viewBox="0 0 24 24"><path d="M16.6,5.82s.51.5,0,0A4.278,4.278,0,0,0,15.54,3h-3.09V12.4a2.592,2.592,0,0,1-2.59,2.5c-1.42,0-2.6-1.16-2.6-2.6c0-1.72,1.66-3.01,3.37-2.48V6.66c-3.45-.46-6.47,2.22-6.47,5.64c0,3.33,2.76,5.7,5.69,5.7c3.14,0,5.69-2.55,5.69-5.7V9.01a7.35,7.35,0,0,0,4.3,1.38V7.3s-1.88.09-3.24-1.48Z"/></svg>
+                        </a>
+                        <a href="https://www.facebook.com/share/18hNdnNBHt/" target="_blank" title="Facebook">
+                            <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.04C6.5 2.04 2 6.53 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.85C10.44 7.34 11.93 5.96 14.22 5.96C15.31 5.96 16.45 6.15 16.45 6.15V8.62H15.19C13.95 8.62 13.56 9.39 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96A10 10 0 0 0 22 12.06C22 6.53 17.5 2.04 12 2.04Z"/></svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Location</h4>
+                    <p>
+                        <strong>Cinere Bellevue Mall</strong><br>
+                        GF 18-20, Jalan Merawan No.23<br>
+                        Pangkalan Jati, Kec. Cinere<br>
+                        Kota Depok, Jawa Barat 16514
+                    </p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>
+                        <strong>WhatsApp:</strong><br>
+                        +62 857-1119-4565<br><br>
+                        <strong>Email:</strong><br>
+                        phoenixgymnasticsa@gmail.com
+                    </p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2025 Phoenix Gymnastics Academy. All rights reserved. Powered by Olympic dreams.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // FAQ Toggle
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', function() {
+                const item = this.parentElement;
+                const answer = item.querySelector('.faq-answer');
+                const isActive = this.classList.contains('active');
+                
+                // Close all other FAQs
+                document.querySelectorAll('.faq-question').forEach(q => {
+                    q.classList.remove('active');
+                    q.parentElement.querySelector('.faq-answer').classList.remove('active');
+                });
+                
+                // Toggle current FAQ
+                if (!isActive) {
+                    this.classList.add('active');
+                    answer.classList.add('active');
+                }
+            });
+        });
+
+        // Form submission
+        function handleSubmit(event) {
+            event.preventDefault();
+            
+            const formData = {
+                parentName: document.getElementById('parentName').value,
+                phone: document.getElementById('phone').value,
+                childName: document.getElementById('childName').value,
+                childAge: document.getElementById('childAge').value,
+                preferredDay: document.getElementById('preferredDay').value,
+                source: document.getElementById('source').value || 'Tidak disebutkan'
+            };
+            
+            // Create WhatsApp message
+            const message = `*TRIAL CLASS BOOKING - PHOENIX GYMNASTICS*%0A%0A` +
+                `Nama Orang Tua: ${formData.parentName}%0A` +
+                `WhatsApp: ${formData.phone}%0A` +
+                `Nama Anak: ${formData.childName}%0A` +
+                `Usia: ${formData.childAge}%0A` +
+                `Hari Preferred: ${formData.preferredDay}%0A` +
+                `Dari: ${formData.source}%0A%0A` +
+                `Saya tertarik untuk book trial class. Mohon info jadwal yang available. Terima kasih! 🙏`;
+            
+            // Open WhatsApp
+            window.open(`https://wa.me/6285711194565?text=${message}`, '_blank');
+            
+            // Show success message
+            document.getElementById('bookingForm').innerHTML = `
+                <div class="success-message">
+                    <h2>✅ Terima Kasih!</h2>
+                    <p>Silakan lanjutkan di WhatsApp untuk konfirmasi jadwal trial class Anda. Tim kami akan segera membantu!</p>
+                </div>
+            `;
+        }
+        
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
