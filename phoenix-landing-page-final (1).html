@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trial Class Rp 200rb - Phoenix Gymnastics Academy | Coach Rifda Irfanaluthfi</title>
+    <meta name="description" content="Belajar gymnastics dari Rifda Irfanaluthfi, satu-satunya pesenam Indonesia di Olimpiade Paris 2024. Trial class Rp 200rb di Cinere Bellevue Mall. Book sekarang!">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: linear-gradient(135deg, #fdf2f8 0%, #fce7f3 50%, #fbcfe8 100%);
+        }
+        
+        /* Pink Color Palette - Phoenix Brand */
+        :root {
+            --pink-50: #fdf2f8;
+            --pink-100: #fce7f3;
+            --pink-200: #fbcfe8;
+            --pink-300: #f9a8d4;
+            --pink-400: #f472b6;
+            --pink-500: #ec4899;
+            --pink-600: #db2777;
+            --pink-700: #be185d;
+            --pink-800: #9d174d;
+            --pink-900: #831843;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(236, 72, 153, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 1rem 0;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            height: 50px;
+        }
+        
+        .cta-header {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 24px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            font-size: 15px;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, var(--pink-500) 0%, var(--pink-600) 100%);
+            color: white;
+            box-shadow: 0 4px 15px rgba(236, 72, 153, 0.3);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(236, 72, 153, 0.4);
+        }
+        
+        .btn-secondary {
+            background: white;
+            color: var(--pink-600);
+            border: 2px solid var(--pink-200);
+        }
+        
+        .btn-secondary:hover {
+            background: var(--pink-50);
+            border-color: var(--pink-300);
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: 60px 0;
+            overflow: hidden;
+        }
+        
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        
+        .hero-content h1 {
+            font-size: 56px;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 24px;
+            color: #1a1a1a;
+        }
+        
+        .hero-content h1 .highlight {
+            background: linear-gradient(135deg, var(--pink-500) 0%, var(--pink-600) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero-content p {
+            font-size: 20px;
+            color: #4a5568;
+            margin-bottom: 32px;
+            line-height: 1.7;
+        }
+        
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: white;
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--pink-700);
+            box-shadow: 0 4px 15px rgba(236, 72, 153, 0.2);
+            margin-bottom: 24px;
+        }
+        
+        .trust-indicators {
+            display: flex;
+            gap: 30px;
+            margin-top: 32px;
+            flex-wrap: wrap;
+        }
+        
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 15px;
+            color: #4a5568;
+        }
+        
+        .trust-item svg {
+            color: var(--pink-500);
+        }
+        
+        .hero-image {
+            position: relative;
+        }
+        
+        .hero-image img {
+            width: 100%;
+            border-radius: 30px;
+            box-shadow: 0 20px 60px rgba(236, 72, 153, 0.25);
+        }
+        
+        .floating-card {
+            position: absolute;
+            background: white;
+            padding: 20px;
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        .floating-card.top-right {
+            top: -20px;
+            right: -20px;
+        }
+        
+        .floating-card.bottom-left {
+            bottom: -20px;
+            left: -20px;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        /* Promo Banner */
+        .promo-banner {
+            background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+            color: white;
+            text-align: center;
+            padding: 16px;
+            font-weight: 700;
+            font-size: 18px;
+            animation: pulse 2s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+        }
+        
+        /* Benefits Section */
+        .benefits {
+            padding: 80px 0;
+            background: white;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #1a1a1a;
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            font-size: 18px;
+            color: #6b7280;
+            margin-bottom: 60px;
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        
+        .benefit-card {
+            background: var(--pink-50);
+            padding: 40px 30px;
+            border-radius: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 2px solid var(--pink-100);
+        }
+        
+        .benefit-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(236, 72, 153, 0.2);
+            border-color: var(--pink-300);
+        }
+        
+        .benefit-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--pink-500) 0%, var(--pink-600) 100%);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+            box-shadow: 0 8px 20px rgba(236, 72, 153, 0.3);
+        }
+        
+        .benefit-icon svg {
+            width: 40px;
+            height: 40px;
+            color: white;
+        }
+        
+        .benefit-card h3 {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: var(--pink-900);
+        }
+        
+        .benefit-card p {
+            color: #6b7280;
+            line-height: 1.7;
+        }
+        
+        /* Pricing Section */
+        .pricing {
+            padding: 80px 0;
+            background: linear-gradient(135deg, var(--pink-50) 0%, white 100%);
+        }
+        
+        .pricing-cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .pricing-card {
+            background: white;
+            border-radius: 24px;
+            padding: 40px;
+            box-shadow: 0 10px 40px rgba(236, 72, 153, 0.15);
+            border: 3px solid var(--pink-100);
+            transition: all 0.3s ease;
+        }
+        
+        .pricing-card.featured {
+            border-color: var(--pink-500);
+            box-shadow: 0 15px 50px rgba(236, 72, 153, 0.3);
+            transform: scale(1.05);
+        }
+        
+        .pricing-card.featured .pricing-badge {
+            background: var(--pink-500);
+            color: white;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 16px;
+        }
+        
+        .pricing-card h3 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: var(--pink-900);
+        }
+        
+        .pricing-card .price {
+            font-size: 48px;
+            font-weight: 800;
+            color: var(--pink-600);
+            margin-bottom: 24px;
+        }
+        
+        .pricing-card .price span {
+            font-size: 24px;
+            color: #6b7280;
+        }
+        
+        .pricing-features {
+            list-style: none;
+            margin-bottom: 32px;
+        }
+        
+        .pricing-features li {
+            padding: 12px 0;
+            border-bottom: 1px solid var(--pink-100);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .pricing-features li svg {
+            color: var(--pink-500);
+            flex-shrink: 0;
+        }
+        
+        /* Form Section */
+        .form-section {
+            padding: 80px 0;
+            background: white;
+        }
+        
+        .form-container {
+            max-width: 700px;
+            margin: 0 auto;
+            background: linear-gradient(135deg, var(--pink-50) 0%, var(--pink-100) 100%);
+            padding: 50px;
+            border-radius: 30px;
+            box-shadow: 0 20px 60px rgba(236, 72, 153, 0.2);
+            border: 3px solid var(--pink-200);
+        }
+        
+        .form-group {
+            margin-bottom: 24px;
+        }
+        
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--pink-900);
+            font-size: 15px;
+        }
+        
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 16px;
+            border: 2px solid var(--pink-200);
+            border-radius: 12px;
+            font-size: 16px;
+            background: white;
+            transition: all 0.3s ease;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--pink-500);
+            box-shadow: 0 0 0 4px rgba(236, 72, 153, 0.1);
+        }
+        
+        .submit-btn {
+            width: 100%;
+            padding: 18px;
+            background: linear-gradient(135deg, var(--pink-500) 0%, var(--pink-600) 100%);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 18px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 20px rgba(236, 72, 153, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 30px rgba(236, 72, 153, 0.4);
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            padding: 80px 0;
+            background: linear-gradient(135deg, var(--pink-500) 0%, var(--pink-600) 100%);
+            color: white;
+        }
+        
+        .testimonials .section-title,
+        .testimonials .section-subtitle {
+            color: white;
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        
+        .testimonial-card {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            color: #1a1a1a;
+        }
+        
+        .testimonial-rating {
+            color: #fbbf24;
+            margin-bottom: 16px;
+            font-size: 20px;
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 20px;
+            line-height: 1.7;
+            color: #4a5568;
+        }
+        
+        .testimonial-author {
+            font-weight: 700;
+            color: var(--pink-900);
+        }
+        
+        .testimonial-role {
+            font-size: 14px;
+            color: #6b7280;
+        }
+        
+        /* Footer */
+        footer {
+            background: #1a1a1a;
+            color: white;
+            padding: 60px 0 30px;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 60px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-logo {
+            height: 60px;
+            margin-bottom: 20px;
+            filter: brightness(0) invert(1);
+        }
+        
+        .footer-section h4 {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: var(--pink-300);
+        }
+        
+        .footer-section p {
+            line-height: 1.8;
+            color: #9ca3af;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            background: var(--pink-500);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            background: var(--pink-600);
+            transform: translateY(-3px);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #374151;
+            color: #9ca3af;
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .hero-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .hero-content h1 {
+                font-size: 36px;
+            }
+            
+            .hero-content p {
+                font-size: 16px;
+            }
+            
+            .benefits-grid,
+            .pricing-cards,
+            .testimonials-grid,
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .pricing-card.featured {
+                transform: scale(1);
+            }
+            
+            .form-container {
+                padding: 30px 20px;
+            }
+            
+            .cta-header {
+                flex-direction: column;
+                width: 100%;
+            }
+            
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+        
+        /* Success State */
+        .success-message {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+        }
+        
+        .success-message h2 {
+            font-size: 32px;
+            margin-bottom: 16px;
+        }
+        
+        .success-message p {
+            font-size: 18px;
+            opacity: 0.95;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <img src="logo.png" alt="Phoenix Gymnastics Academy" class="logo">
+                <div class="cta-header">
+                    <a href="#form" class="btn btn-primary">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z"/></svg>
+                        Book Trial
+                    </a>
+                    <a href="https://wa.me/6285711194565" target="_blank" class="btn btn-secondary">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                        WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Promo Banner -->
+    <div class="promo-banner">
+        🔥 PROMO SPESIAL: Trial Class Normal Rp 200rb - Booking Sekarang!
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <div class="badge">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+                        Satu-satunya Olympian di Cinere
+                    </div>
+                    
+                    <h1>
+                        Anak Anda Belajar dari <span class="highlight">Atlet Olimpiade</span>
+                    </h1>
+                    
+                    <p>
+                        Phoenix Gymnastics Academy - Diajar langsung oleh <strong>Rifda Irfanaluthfi</strong>, 
+                        pesenam pertama Indonesia yang berkompetisi di Olimpiade Paris 2024 🇮🇩
+                    </p>
+                    
+                    <a href="#form" class="btn btn-primary" style="font-size: 18px; padding: 16px 32px;">
+                        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z"/></svg>
+                        Book Trial Class Rp 200rb
+                    </a>
+                    
+                    <div class="trust-indicators">
+                        <div class="trust-item">
+                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+                            <strong>Paris 2024 Olympian</strong>
+                        </div>
+                        <div class="trust-item">
+                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                            <strong>Cinere Bellevue Mall</strong>
+                        </div>
+                        <div class="trust-item">
+                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+                            <strong>Small Class (Max 8)</strong>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hero-image">
+                    <!-- REPLACE THIS WITH RIFDA'S ACTUAL PHOTO -->
+                    <!-- Download high-res from: https://www.gettyimages.com/photos/rifda-irfanaluthfi -->
+                    <!-- Or use from Instagram: @rifdairfanaluthfi -->
+                    <!-- Recommended: Portrait photo, gymnastics action, or Paris 2024 competition -->
+                    <img src="https://images.unsplash.com/photo-1599058917212-d750089bc07e?w=600" alt="Rifda Irfanaluthfi - Paris 2024 Olympic Gymnast" style="object-fit: cover;">
+                    
+                    <div class="floating-card bottom-left">
+                        <div style="font-size: 32px; font-weight: 800; color: #ec4899; line-height: 1;">Paris 2024</div>
+                        <div style="font-size: 14px; color: #6b7280; font-weight: 600;">First Indonesian Gymnast</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits">
+        <div class="container">
+            <h2 class="section-title">Kenapa Parents Pondok Indah & Cinere Pilih Phoenix?</h2>
+            <p class="section-subtitle">Gymnastics bukan hanya olahraga - ini investasi untuk masa depan anak Anda</p>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+                    </div>
+                    <h3>Olympic-Level Coaching</h3>
+                    <p>Diajar langsung oleh Rifda Irfanaluthfi, pesenam pertama Indonesia yang berkompetisi di Olimpiade Paris 2024 - 4x SEA Games champion</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                    </div>
+                    <h3>Lokasi Strategis</h3>
+                    <p>Di Cinere Bellevue Mall - 5 menit dari Pondok Indah, akses mudah, parkir luas, aman untuk anak</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <svg fill="currentColor" viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+                    </div>
+                    <h3>Small Class Size</h3>
+                    <p>Maksimal 8 students per class untuk perhatian personal maksimal dari coach bersertifikat</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing">
+        <div class="container">
+            <h2 class="section-title">Mulai Perjalanan Gymnastics Anak Anda</h2>
+            <p class="section-subtitle">Pilih paket yang sesuai dengan kebutuhan keluarga</p>
+            
+            <div class="pricing-cards">
+                <div class="pricing-card featured">
+                    <div class="pricing-badge">MOST POPULAR</div>
+                    <h3>Trial Class</h3>
+                    <div class="price">200<span>rb</span></div>
+                    <ul class="pricing-features">
+                        <li>
+                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                            1 sesi class dengan Coach Rifda
+                        </li>
+                        <li>
+                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                            Assessment kemampuan gratis
+                        </li>
+                        <li>
+                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                            Akses equipment profesional
+                        </li>
+                        <li>
+                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                            Konsultasi program training
+                        </li>
+                    </ul>
+                    <a href="#form" class="btn btn-primary" style="width: 100%; justify-content: center;">Book Trial Now</a>
+                </div>
+                
+                <div class="pricing-card">
+                    <h3>Monthly Package</h3>
+                    <div class="price">600<span>rb - 1.3jt</span></div>
+                    <ul class="pricing-features">
+                        <li>
+                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                            1x - Unlimited per minggu
+                        </li>
+                        <li>
+                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                            Membership fee: Rp 700rb (one-time)
+                        </li>
+                        <li>
+                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                            Bonus T-shirt & Leotard
+                        </li>
+                        <li>
+                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                            Diskon sibling 20%
+                        </li>
+                    </ul>
+                    <a href="https://wa.me/6285711194565" class="btn btn-secondary" style="width: 100%; justify-content: center;">Tanya Detail</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Form Section -->
+    <section id="form" class="form-section">
+        <div class="container">
+            <h2 class="section-title">Book Trial Class Sekarang</h2>
+            <p class="section-subtitle">Isi form di bawah dan kami akan hubungi via WhatsApp dalam 5 menit!</p>
+            
+            <div class="form-container" id="bookingForm">
+                <form onsubmit="handleSubmit(event)">
+                    <div class="form-group">
+                        <label for="parentName">Nama Orang Tua *</label>
+                        <input type="text" id="parentName" name="parentName" placeholder="Nama Anda" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Nomor WhatsApp *</label>
+                        <input type="tel" id="phone" name="phone" placeholder="08123456789" pattern="[0-9]{10,13}" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="childName">Nama Anak *</label>
+                        <input type="text" id="childName" name="childName" placeholder="Nama anak Anda" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="childAge">Usia Anak *</label>
+                        <select id="childAge" name="childAge" required>
+                            <option value="">Pilih usia</option>
+                            <option value="2-3 tahun">2-3 tahun (Toddler)</option>
+                            <option value="4-5 tahun">4-5 tahun (Toddler)</option>
+                            <option value="6-8 tahun">6-8 tahun (Artistic)</option>
+                            <option value="9-12 tahun">9-12 tahun (Artistic)</option>
+                            <option value="13+ tahun">13+ tahun (Artistic)</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="preferredDay">Hari Preferred *</label>
+                        <select id="preferredDay" name="preferredDay" required>
+                            <option value="">Pilih hari</option>
+                            <option value="Weekday (Senin-Jumat)">Weekday (Senin-Jumat)</option>
+                            <option value="Weekend (Sabtu-Minggu)">Weekend (Sabtu-Minggu)</option>
+                            <option value="Flexible">Flexible</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="source">Dari mana Anda tahu Phoenix?</label>
+                        <select id="source" name="source">
+                            <option value="">Pilih sumber</option>
+                            <option value="Instagram Ads">Instagram Ads</option>
+                            <option value="Facebook Ads">Facebook Ads</option>
+                            <option value="TikTok">TikTok</option>
+                            <option value="Google">Google</option>
+                            <option value="Referral">Referral (Teman/Keluarga)</option>
+                            <option value="Lewat di Mall">Lewat di Mall</option>
+                            <option value="Lainnya">Lainnya</option>
+                        </select>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">
+                        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                        Kirim via WhatsApp & Book Trial
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+                    </button>
+                    
+                    <p style="text-align: center; font-size: 13px; color: #6b7280; margin-top: 20px;">
+                        * Dengan mengirim form, Anda akan dihubungkan ke WhatsApp kami untuk konfirmasi jadwal
+                    </p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">Apa Kata Parents?</h2>
+            <p class="section-subtitle">Testimoni nyata dari parents yang sudah join Phoenix</p>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"My daughter has gained so much confidence since joining Phoenix. The coaches are patient, encouraging, and truly care about each child's development."</p>
+                    <div class="testimonial-author">Sarah K.</div>
+                    <div class="testimonial-role">Parent - Pondok Indah</div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"The dedication of the coaching staff is incredible. My son has thrived in the competitive program and has developed discipline that extends beyond gymnastics."</p>
+                    <div class="testimonial-author">Ahmad J.</div>
+                    <div class="testimonial-role">Parent - Cinere</div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"Anakku sekarang lebih berani dan aktif. Coach Rifda amazing! Lokasi juga strategis, 10 menit dari rumah. Worth every penny!"</p>
+                    <div class="testimonial-author">Ibu Dina</div>
+                    <div class="testimonial-role">Parent - Lebak Bulus</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <img src="logo.png" alt="Phoenix Logo" class="footer-logo" style="filter: brightness(0) invert(1);">
+                    <p>Olympic-level gymnastics coaching di jantung Jakarta & Depok. Bangun kepercayaan diri, disiplin, dan kemampuan atletik anak Anda bersama kami.</p>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/phoenixgymacademy" target="_blank">
+                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z"/></svg>
+                        </a>
+                        <a href="https://www.tiktok.com/@phoenixgymacademy" target="_blank">
+                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M16.6,5.82s.51.5,0,0A4.278,4.278,0,0,0,15.54,3h-3.09V12.4a2.592,2.592,0,0,1-2.59,2.5c-1.42,0-2.6-1.16-2.6-2.6c0-1.72,1.66-3.01,3.37-2.48V6.66c-3.45-.46-6.47,2.22-6.47,5.64c0,3.33,2.76,5.7,5.69,5.7c3.14,0,5.69-2.55,5.69-5.7V9.01a7.35,7.35,0,0,0,4.3,1.38V7.3s-1.88.09-3.24-1.48Z"/></svg>
+                        </a>
+                        <a href="https://www.facebook.com/share/18hNdnNBHt/" target="_blank">
+                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.04C6.5 2.04 2 6.53 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.85C10.44 7.34 11.93 5.96 14.22 5.96C15.31 5.96 16.45 6.15 16.45 6.15V8.62H15.19C13.95 8.62 13.56 9.39 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96A10 10 0 0 0 22 12.06C22 6.53 17.5 2.04 12 2.04Z"/></svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Location</h4>
+                    <p>
+                        <strong>Cinere Bellevue Mall</strong><br>
+                        GF 18-20, Jalan Merawan No.23<br>
+                        Pangkalan Jati, Kec. Cinere<br>
+                        Kota Depok, Jawa Barat 16514
+                    </p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>
+                        <strong>WhatsApp:</strong><br>
+                        +62 857-1119-4565<br><br>
+                        <strong>Email:</strong><br>
+                        phoenixgymnasticsa@gmail.com
+                    </p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2025 Phoenix Gymnastics Academy. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault();
+            
+            const formData = {
+                parentName: document.getElementById('parentName').value,
+                phone: document.getElementById('phone').value,
+                childName: document.getElementById('childName').value,
+                childAge: document.getElementById('childAge').value,
+                preferredDay: document.getElementById('preferredDay').value,
+                source: document.getElementById('source').value || 'Tidak disebutkan'
+            };
+            
+            // Create WhatsApp message
+            const message = `*TRIAL CLASS BOOKING - PHOENIX GYMNASTICS*%0A%0A` +
+                `Nama Orang Tua: ${formData.parentName}%0A` +
+                `WhatsApp: ${formData.phone}%0A` +
+                `Nama Anak: ${formData.childName}%0A` +
+                `Usia: ${formData.childAge}%0A` +
+                `Hari Preferred: ${formData.preferredDay}%0A` +
+                `Dari: ${formData.source}%0A%0A` +
+                `Mohon konfirmasi jadwal trial class. Terima kasih! 🙏`;
+            
+            // Open WhatsApp
+            window.open(`https://wa.me/6285711194565?text=${message}`, '_blank');
+            
+            // Show success message
+            document.getElementById('bookingForm').innerHTML = `
+                <div class="success-message">
+                    <h2>✅ Terima Kasih!</h2>
+                    <p>Silakan lanjutkan di WhatsApp untuk konfirmasi jadwal trial class Anda</p>
+                </div>
+            `;
+        }
+        
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
